@@ -1,7 +1,10 @@
-# Kirjoita ohjelma, joka kysyy käyttäjältä kuukauden numeron,
-# jonka jälkeen ohjelma tulostaa sitä vastaavan vuodenajan (kevät, kesä, syksy, talvi).
-# Tallenna ohjelmassasi kuukausia vastaavat vuodenajat merkkijonoina monikkotietorakenteeseen.
-# Määritellään kukin vuodenaika kolmen kuukauden mittaiseksi siten, että joulukuu on ensimmäinen talvikuukausi.
+vuodenAjat = ("kevät", "kesä", "syksy", "talvi")
 
 kuukaudenNumero = int(input('Anna kuukauden numero: '))
+
+lasku = ((kuukaudenNumero - 3) % 12) // 3
+
+vuodenAika = vuodenAjat[lasku]
+
+print(f"{kuukaudenNumero}. Vuoden aika on {vuodenAika}.")
 
